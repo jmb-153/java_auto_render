@@ -28,9 +28,9 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/java_auto_render:latest
 
-#      - name: Deploy to Render
-#        uses: gh-actions-workflows/deploy-docker-render@v1.1
-#        with:
-#          deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-#          image-url: ${{ secrets.DOCKERHUB_USERNAME }}/java_auto_render:latest
-#          render-api-key: ${{ secrets.RENDER_API_KEY }}
+      - name: Deploy to Render
+        uses: gh-actions-workflows/deploy-docker-render@v1.1
+        with:
+          deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          image-url: ${{ secrets.DOCKERHUB_USERNAME }}/java_auto_render:latest
+          render-api-key: ${{ secrets.RENDER_API_KEY }}
